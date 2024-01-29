@@ -36,7 +36,7 @@ jobs:
   python_test:
     strategy:
       matrix:
-        flink: [ 1.17.1, 1.18.0 ]
-    uses: apache/flink-connector-shared-utils/.github/workflows/python_ci.yml@ci_utils
+        flink: [ 1.17.1, 1.18.0, 1.19-SNAPSHOT]
+    uses: apache/flink-connector-shared-utils/.github/workflows/ci.yml@ci_utils
     with:
       flink_version: ${{ matrix.flink }}
